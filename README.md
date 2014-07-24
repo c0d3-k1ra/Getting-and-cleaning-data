@@ -3,10 +3,10 @@
 ## <u>How To</u>
 To repeat the work done in this project:
 
-* 1. Download source data from http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
-* 2. Unzip to your working directory
-* 4. Keep the data in 'UCI HAR Dataset'
-* 3. Execute the script run_analysis.R from that directory.
+1. Download source data from http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+2. Unzip to your working directory
+4. Keep the data in 'UCI HAR Dataset'
+3. Execute the script run_analysis.R from that directory.
 
 ## <u>Steps Performed</u>
 The bulk of the steps done by the script involve loading the data provided from the source, and tidying this into a single data frame containing just the original data cells of interest, in the desired format.  Only the final major step computes a new result from the tidied data, writing out subject ids, activites, and mean of all measures of interest.
