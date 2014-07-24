@@ -1,21 +1,33 @@
-Getting-and-cleaning-data
-=========================
+# Getting and Cleaning Data, Peer Assessment Project
 
-Course Project
+## <u>How To</u>
+To repeat the work done in this project:
 
-The purpose of this project is to demonstrate your ability to collect, work with, and clean a data set. The goal is to prepare tidy data that can be used for later analysis. You will be graded by your peers on a series of yes/no questions related to the project. You will be required to submit: 1) a tidy data set as described below, 2) a link to a Github repository with your script for performing the analysis, and 3) a code book that describes the variables, the data, and any transformations or work that you performed to clean up the data called CodeBook.md. You should also include a README.md in the repo with your scripts. This repo explains how all of the scripts work and how they are connected.  
+* 1. Download source data from http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+* 2. Unzip to your working directory
+* 3. Execute the script run_analysis.R from that directory.
 
-One of the most exciting areas in all of data science right now is wearable computing - see for example this article . Companies like Fitbit, Nike, and Jawbone Up are racing to develop the most advanced algorithms to attract new users. The data linked to from the course website represent data collected from the accelerometers from the Samsung Galaxy S smartphone. A full description is available at the site where the data was obtained: 
+## <u>Steps Performed</u>
+The bulk of the steps done by the script involve loading the data provided from the source, and tidying this into a single data frame containing just the original data cells of interest, in the desired format.  Only the final major step computes a new result from the tidied data, writing out subject ids, activites, and mean of all measures of interest.
 
-http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
-Here are the data for the project: 
 
-https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
-You should create one R script called run_analysis.R that does the following. 
+1.  feature names and subset to only those features of mean or std measures
 
--Merges the training and the test sets to create one data set.
--Extracts only the measurements on the mean and standard deviation for each measurement. 
--Uses descriptive activity names to name the activities in the data set
-Appropriately labels the data set with descriptive variable names. 
--Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
-**Good luck!**
+2.  the train and test feature sets and subset only the desired features
+
+3. bine the two datasets into 1
+
+4. Each column names to features
+
+5. Read and combine the train and test activity codes
+
+6. Get activity labels and attach to activity codes
+
+7. Get and combine the train and test subject ids
+
+8. Combine and name subjects and activity names
+
+9. Combine with measures of interest for finished desired data frame
+
+### Compute New Result
+From the set produced for analysis, compute and report means of all measures, grouped by subject_id and by activity.
